@@ -17,6 +17,6 @@ app.all('*', (req, res) => {
 
 app.use((_, res) => {});
 
-app.listen(3000, "0.0.0.0", () => {
+app.listen(3000, "0.0.0.0", function() => {
   console.log("Express app listening on port 3000");
 });
