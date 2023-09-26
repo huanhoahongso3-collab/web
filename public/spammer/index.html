@@ -113,7 +113,7 @@ function updateClickButton() {
       }
     }
 
- async function send() {
+function send() {
 document.getElementById('clickButton').style = "font-family: Varela; color: white";
  if (isThrottled) {
 if (totalThrottle < 6 && allowed) {
@@ -133,7 +133,7 @@ if (totalThrottle < 6 && allowed) {
   clickCount++;
   updateClickButton();
   lastClickTime = Date.now();
-}
+
   // Make a GET request 3 seconds after the last click
   clearTimeout(intervalId);
   intervalId = setTimeout(fetchAndUpdateClickButton, 3000);
