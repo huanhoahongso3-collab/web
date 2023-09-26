@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Varela'; 
-  src: url("https://trueuser.tk/VarelaRound-Regular.ttf");
+  src: url("./VarelaRound-Regular.ttf");
 }
 #box {background-color: #141D30; width: 410px; border-radius: 10px; margin: 5px}
 html {
