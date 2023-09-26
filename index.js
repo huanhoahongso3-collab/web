@@ -16,7 +16,8 @@ app.all('*', (req, res) => {
 });
 
 app.use((_, res) => {});
+port = 8080
 
-app.listen(3000, "0.0.0.0", () => {
-  console.log("Express app listening on port 3000");
+app.listen(port, "0.0.0.0", () => {
+  console.log("Live on port" + port);
 });
