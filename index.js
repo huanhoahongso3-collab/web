@@ -16,6 +16,6 @@ app.all('*', (req, res) => {
 
 app.use((_, res) => {});
 
-app.listen(env.port, "0.0.0.0", () => {
-  console.log("Live on port" + env.port);
+app.listen(env.PORT, "0.0.0.0", () => {
+  console.log("Live on port" + env.PORT);
 });
