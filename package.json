@@ -1,0 +1,25 @@
+{
+  "name": "0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@replit/database": "^2.0.2",
+    "api.js": "0.0.5",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.1",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "feed": "^4.2.2",
+    "jquery": "^3.6.0",
+    "replit-client": "^0.25.0",
+    "ws": "^8.11.0",
+    "xmlbuilder2": "^3.1.1"
+  }
+}

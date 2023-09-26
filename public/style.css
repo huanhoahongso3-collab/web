@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Varela'; 
+  src: url("https://trueuser.tk/VarelaRound-Regular.ttf");
+}
+#box {background-color: #141D30; width: 410px; border-radius: 10px; margin: 5px}
+html {
+  font-family: 'Varela', sans-serif;
+  background-color: #1b2538;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  scroll-behavior: smooth;
+    line-height: 1.4
+}
+
+.collapse {
+    width: 0px
+}
+
+#butn {margin: 5px; width: 370px; margin-top: 0px}
+#butnn {margin: 5px; width: 390px; margin-top: 0px}
+
+@media only screen and (max-width: 780px) {
+  html {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+h1 {
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.topnav {
+  overflow: hidden;
+  position: sticky;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  user-select: none;
+  text-shadow: none;
+  border-radius: 5px;
+}
+
+.topnav a:hover {
+  background-color: #12192a;
+}
+
+.topnav a.active {
+  background-image: linear-gradient(to right, #118bd8, #076fc1);
+  color: white;
+}
+
+.button {
+  transition: 0.2s;
+  background-image: linear-gradient(to right, #118bd8, #076fc1);
+  background-color: #000000;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.button:active {
+  box-shadow: 0 0 5px rgba(0, 114, 255, 0.7);
+}
+
+.button:hover {
+  transition: 0.2s;
+  background-image: none;
+  background-color: #000000;
+  color: #0072ff;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  border-radius: 5px;
+  background-color: black;
+  border-color: #000000;
+  border-width: 10px;
+  margin: 5px;
+
+}
+
+.card:hover {
+  animation: fade 0.2s 1 forwards;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, black, black, #0072ff);
+  color: black;
+  border-right: 3px;
+  border-right-color: #3f95ff;
+    .button {
+        animation: yah 0.2s 1 forwards;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.03))
+     }
+}
+
+.card.reverse {
+  animation: fade 0.2s 1 reverse;
+}
+
+.card.reverse .button {
+  animation: yah 0.2s 1 reverse;
+}
+
+@keyframes fade {
+  0% {
+    background-image: linear-gradient(to right, black, black);
+  }
+  30% {
+    background-image: linear-gradient(to right, black, black, black, black, black, #011733);
+  }
+  55% {
+    background-image: linear-gradient(to right, black, black, black, black, #02316b);
+  }
+  75% {
+    background-image: linear-gradient(to right, black, black, black, #011733, #034ca5);
+  }
+  100% {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, black, #011733, #0072ff);
+    border-right-color: #3f95ff;
+  }
+}
+@keyframes yah {
+  0% {
+    background-image: linear-gradient(to right, #118bd8, #076fc1);
+  }
+    25% {
+    background-image: linear-gradient(to right, #0f6ba3, #065089);
+  }
+    50% {
+    background-image: linear-gradient(to right, #0b466b, #053357);
+  }
+    75% {
+    background-image: linear-gradient(to right, #031520, #000000);
+  }
+  100% {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.03));
+  }
+  }
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+.container {
+  padding: 2px 16px;
+}
+
+@media only screen and (max-width: 780px) {
+  .card {
+    width: 97%;
+  }
+  #true {
+    display: none;
+  }
+  #box {width: 97%}
+    #spot {width: 97%}
+    #fea {width: 95.5%}
+    #butn {width: 95.5%}
+    #butnn {width: 98.5%}
+}
+
+.xt-ct-menu {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.xtlab-ctmenu-item:hover {
+  background-color: #12192a;
+}
+
+.xtlab-ctmenu-item {
+  color: white;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.xtlab-ctmenu-sub a {
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.xtlab-ctmenu-sub a:hover {
+  background-color: #12192a;
+  border: none;
+}

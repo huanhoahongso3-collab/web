@@ -1,0 +1,154 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5021008750553828"
+     crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta property="og:site_name" content="thisistrueuser">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Button" />
+<meta property="og:description" content="Clicker 2? Maybe." />
+<meta property="og:url" content="https://trueuser.tk/" />
+<meta property="og:image" content="https://trueuser.tk/truef.png" />
+<meta name="theme-color" content="#2f3136">
+<title>Button - thisistrueuser</title>
+<link rel="icon" id="icon" href="/truef.png">
+<style>
+    @font-face {
+    font-family: 'Varela'; /*a name to be used later*/
+    src: url("https://trueuser.tk/VarelaRound-Regular.ttf"); /*URL to font*/
+}
+.button {  transition: 0.2s; background-image: linear-gradient(to right, #118bd8 , #076fc1); background-color: #000000;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px; border-radius: 5px; cursor: pointer; padding: 25px 25px; z-index: 10}
+.button:active {
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.7);
+}
+.button:hover {
+    background-image: none;
+  background-color: #000000;
+color: #0072ff
+}
+html{font-family: Varela;  background-color: #1b2538; color: white;  margin-left: 10%; margin-right: 10%;}
+    
+@media only screen and (max-width: 600px) {
+  html {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+p {font-size: 16px; line-height: 23px}
+.topnav {
+  overflow: hidden;
+  position: sticky;
+}
+.xt-ct-menu {
+        position: relative;
+        display: inline-block;
+      float: right;
+    }
+    .xtlab-ctmenu-item:hover {
+       background-color: #12192a;
+    }
+
+    .xtlab-ctmenu-item {
+        color: white;
+        padding: 10px 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px
+    }
+
+    .xtlab-ctmenu-sub a {
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+    .xtlab-ctmenu-sub a:hover {
+        background-color: #12192a;
+        border: none;
+        
+    }
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 16px;  user-select: none;   
+  text-shadow: none;
+    border-radius: 5px
+}
+
+.topnav a:hover {
+  background-color: #12192a;
+}
+
+.topnav a.active {
+  background-image: linear-gradient(to right, #118bd8 , #076fc1);
+  color: White;
+}
+
+</style>
+<div>
+<div class="topnav">
+  <a href="/" title="For all things trueuser">‹ Home</a>
+    <a class="active">Button</a><div class="xt-ct-menu" height="20" width="20">
+    <div class="xtlab-ctmenu-item" id="tog"><img src="/link.png" height="20" width="20"/></div>
+    
+</div>
+    <div class="xtlab-ctmenu-sub" id="this" style="display: flex; postion: absolute; overflow: auto; width: auto; white-space: nowrap; text-align: right">
+        <div style="margin-left: auto">
+        <a href="https://www.reddit.com/user/realPacManVN"><img src="/reddit.svg" height="20" width="20"/></a>
+        <a href="https://youtube.com/thisistrueuser"><img src="/youtube.svg" height="20" width="20"/></a>
+        <a href="https://twitter.com/trueuser_"><img src="/twitter.svg" height="20" width="20"/></a>
+        <a href="https://roblox.com/groups/8911797/trueusers-room#!/"><img src="/roblox.png" height="20" width="20"/></a>
+        <a href="/discord"><img src="/disc.png" height="20" width="20"/></a>
+        <a href="https://ko-fi.com/trueuser"><img src="/kofi.png" height="20" width="20"/></a>
+    </div></div>
+</div>
+</div>
+
+<script>
+
+  var score = 0
+
+function int(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+jQuery(document).ready(function($) {
+$( "#sus" ).click(function() {
+  var height = int(0, window.innerWidth - 200)
+  var width = int(0, window.innerHeight - 130)
+  $("#sus").css({marginLeft: String(height), marginTop: String(width)})
+  score += 1
+  $("#sus").html(String(score))
+})})
+$( "#tog" ).click(function() {
+  $( "#this" ).toggle("slide");
+});
+let man = document.cookie;
+if (man.includes("null_medal=true")) {document.getElementById("icon").href = "/trueg.png";}
+</script>
+<button id="sus" class="button" style="font-family: Varela"> 0</button>
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+        <script></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PN9F3D1WT1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PN9F3D1WT1');
+</script>
