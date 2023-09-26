@@ -123,7 +123,7 @@ if (totalThrottle < 6 && allowed) {
     if (throttledClickCount > 0) {
       // Send additional post requests until throttled click count reaches 0
       while (throttledClickCount > 0) {
-        await fetch('https://api.trueuser0.repl.co/click'', {
+        await fetch('https://api.trueuser0.repl.co/click', {
           method: 'POST',
         });
         throttledClickCount--;
