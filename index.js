@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const Database = require("@replit/database");
-
+const port = 8080
 const db = new Database();
 
 const compression = require('compression');
@@ -16,7 +16,6 @@ app.all('*', (req, res) => {
 });
 
 app.use((_, res) => {});
-port = 8080
 
 app.listen(port, "0.0.0.0", () => {
   console.log("Live on port" + port);
