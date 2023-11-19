@@ -46,7 +46,7 @@ p {
 .topnav {
   overflow: hidden;
   position: sticky;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .topnav a {
