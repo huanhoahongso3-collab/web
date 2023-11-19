@@ -17,8 +17,8 @@ html {
     width: 0px
 }
 
-#butn {margin: 5px; width: 360px; margin-top: 0px}
-#butnn {margin: 5px; width: 380px; margin-top: 0px}
+#butn {margin: 5px; width: 360px; margin-top: 2px}
+#butnn {margin: 5px; width: 370px; margin-top: 2px}
 
 @media only screen and (max-width: 780px) {
   html {
