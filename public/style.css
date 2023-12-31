@@ -186,15 +186,24 @@ img {
 
 .xtlab-ctmenu-item:hover {
   transition:0.2s;
-  background-color: #0072ff
+  background-color: #0072ff;
+  border-left-width: 10px
 }
 
 .xtlab-ctmenu-item {
   color: white;
   padding: 10px 10px;
   font-size: 16px;
-  border: none;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #0072ff;
+  border-width: 2px;
   cursor: pointer;
+}
+
+.xtlab-ctmenu-item:active {
+  transition:0.2s;
+  border-left-width: 2px
 }
 
 .xtlab-ctmenu-sub a {
