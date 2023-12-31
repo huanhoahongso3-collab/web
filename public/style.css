@@ -76,8 +76,13 @@ border-left-width: 10px
 	transition: 0.2s;
   background-color: #0072ff;
   color: black;
+  
 }
-
+.topnav a:active {
+		  transition: 0.2s;
+  color: #0072ff;
+  border-left-width: 0px;
+}
 
 .button {
   transition: 0.2s;
