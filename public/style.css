@@ -2,7 +2,7 @@
   font-family: 'Varela'; 
   src: url("./VarelaRound-Regular.ttf");
 }
-#box {width: 410px; border-radius: 10px; margin: 5px}
+#box {width: 410px; border-radius: 10px}
 html {
   font-family: 'Varela', sans-serif;
   background-color: black;
