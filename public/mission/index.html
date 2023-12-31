@@ -58,16 +58,19 @@ font-family: "Firaw";
 src: url("/FiraSansExtraCondensed-Medium.ttf");
 }
   .input {border-radius: 5px; padding: 5px 15px; border: none; background-color: none; margin-left: 15px}
-.button {   background-image: linear-gradient(to right, #118bd8 , #076fc1);
+.button {  
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px; border-radius: 5px; cursor: pointer; padding: 10px 10px; font-family: Varela}
+  font-size: 16px; cursor: pointer; padding: 10px 10px; font-family: Varela}
   .button2 {
-background-image: linear-gradient(to right, #118bd8 , #076fc1);
-  border: none;
+  background-color: #000000;
+  color: #0072ff;
+    border-style: solid;
+    border-color: #0072ff;
+  border-width: 2px;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -75,12 +78,27 @@ background-image: linear-gradient(to right, #118bd8 , #076fc1);
   font-size: 16px; border-radius: 5px; cursor: pointer; padding: 10px 10px; font-family: Varela
   }
   .form {font-size: 16px}
-  body {text-align: center; color: white; font-family: Varela; background-color: #1B2538;}
 .button:active {
-  box-shadow: 0 0 10px rgba(0, 114, 255, 0.7);
+  border-left-width: 2px
 }
 .button2:active {
   box-shadow: 0 0 10px rgba(0, 114, 255, 0.7);
+}
+.button2:hover {
+  transition: 0.2s;
+  background-color: #000000;
+    border-style: solid;
+    border-color: #0072ff;
+  border-width: 2px;
+  border-left-width: 10px;
+}
+.button2:hover {
+  transition: 0.2s;
+  background-color: #000000;
+    border-style: solid;
+    border-color: #0072ff;
+  border-width: 2px;
+  border-left-width: 10px;
 }
 label {
     margin: 5px
