@@ -45,7 +45,8 @@ p {
 .topnav {
   overflow: hidden;
   position: sticky;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px
 }
 
 .topnav a {
@@ -117,7 +118,7 @@ border-left-width: 10px
   background-color: black;
   border-color: #0072ff;
   border-width: 2px;
-  margin: 5px;
+  margin: 7px;
   padding: 5px;
 }
 
@@ -159,8 +160,6 @@ img {
     #butnn {width: 98.5%}
 }
 
-#fea {border-radius: 30px}
-
 .xt-ct-menu {
   position: relative;
   display: inline-block;
@@ -177,7 +176,6 @@ img {
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
 }
 
 .xtlab-ctmenu-sub a {
