@@ -81,12 +81,12 @@ border-left-width: 10px
 .topnav a:active {
 		  transition: 0.2s;
   color: #0072ff;
-  border-left-width: 0px;
+  border-left-width: 2px;
 }
 
 .topnav a.active:active {
 	transition: 0.2s;
-    border-left-width: 0px;
+    border-left-width: 2px;
   
 }
 
@@ -111,7 +111,7 @@ border-left-width: 10px
 .button:active {
 	  transition: 0.2s;
   color: #0072ff;
-  border-left-width: 0px;
+  border-left-width: 2px;
 }
 
 .button:hover {
