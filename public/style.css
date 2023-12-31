@@ -98,7 +98,9 @@ border-left-width: 10px
 }
 
 .button:active {
-  color: #0072ff
+	  transition: 0.2s;
+  color: #0072ff;
+  border-left-width: 0px;
 }
 
 .button:hover {
@@ -126,6 +128,11 @@ border-left-width: 10px
 	transition: 0.2s;
   border-left-width: 15px;
   border-left-color: #0072ff;
+}
+
+.card:active {
+	transition: 0.2s;
+	  border-left-width: 2px;
 }
 
 a {
