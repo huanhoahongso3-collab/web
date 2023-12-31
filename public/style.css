@@ -121,51 +121,6 @@ p {
      }
 }
 
-.card.reverse {
-  animation: fade 0.2s 1 reverse;
-}
-
-.card.reverse .button {
-  animation: yah 0.2s 1 reverse;
-}
-
-@keyframes fade {
-  0% {
-    background-image: linear-gradient(to right, black, black);
-  }
-  30% {
-    background-image: linear-gradient(to right, black, black, black, black, black, #011733);
-  }
-  55% {
-    background-image: linear-gradient(to right, black, black, black, black, #02316b);
-  }
-  75% {
-    background-image: linear-gradient(to right, black, black, black, #011733, #034ca5);
-  }
-  100% {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, black, #011733, #0072ff);
-    border-right-color: #3f95ff;
-  }
-}
-@keyframes yah {
-  0% {
-    background-image: linear-gradient(to right, #118bd8, #076fc1);
-  }
-    25% {
-    background-image: linear-gradient(to right, #0f6ba3, #065089);
-  }
-    50% {
-    background-image: linear-gradient(to right, #0b466b, #053357);
-  }
-    75% {
-    background-image: linear-gradient(to right, #031520, #000000);
-  }
-  100% {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.03));
-  }
-  }
-
-
 a {
   text-decoration: none;
   color: white;
