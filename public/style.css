@@ -93,6 +93,9 @@ p {
   background-image: none;
   background-color: #000000;
   color: #0072ff;
+    border-style: solid;
+    border-color: #0072ff;
+  border-width: 2px;
 }
 
 .card {
