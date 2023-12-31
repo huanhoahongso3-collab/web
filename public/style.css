@@ -49,6 +49,7 @@ p {
 }
 
 .topnav a {
+	transition: 0.2s;
   float: left;
   color: white;
   text-align: center;
@@ -57,53 +58,62 @@ p {
   font-size: 16px;
   user-select: none;
   text-shadow: none;
-  border-radius: 5px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #0072ff;
+  border-width: 2px;
+  margin: 5px
 }
 
 .topnav a:hover {
-  background-color: rgba(255,255,255,0.1);
+transition: 0.2s;
+border-left-color: #0072ff;
+border-left-width: 10px
 }
 
 .topnav a.active {
-  background-image: linear-gradient(to right, #118bd8, #076fc1);
-  color: white;
+	transition: 0.2s;
+  background-color: #0072ff;
+  color: black;
 }
+
 
 .button {
   transition: 0.2s;
-  background-image: linear-gradient(to right, black, #0072ff);
   background-color: #000000;
-  border-style: solid;
-      border-color: black;
+  color: #0072ff;
+    border-style: solid;
+    border-color: #0072ff;
+  border-width: 2px;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 25px;
+  border-radius: 15px;
   cursor: pointer;
   padding: 10px 10px;
   border-width: 2px;
 }
 
 .button:active {
-  box-shadow: 0 0 5px rgba(0, 114, 255, 0.7);
+  color: #0072ff
 }
 
 .button:hover {
   transition: 0.2s;
-  background-image: none;
   background-color: #000000;
-  color: #0072ff;
     border-style: solid;
     border-color: #0072ff;
   border-width: 2px;
+  border-left-width: 10px;
 }
 
 .card {
+	transition: 0.2s;
   width: 390px;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: black;
   border-color: #0072ff;
   border-width: 2px;
@@ -112,15 +122,9 @@ p {
 }
 
 .card:hover {
-  animation: fade 0.2s 1 forwards;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, black, black, #0072ff);
-  color: black;
-  border-right: 3px;
-  border-right-color: #3f95ff;
-    .button {
-        animation: yah 0.2s 1 forwards;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02), black, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.03))
-     }
+	transition: 0.2s;
+  border-left-width: 15px;
+  border-left-color: #0072ff;
 }
 
 a {
