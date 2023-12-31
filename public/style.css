@@ -84,6 +84,12 @@ border-left-width: 10px
   border-left-width: 0px;
 }
 
+.topnav a.active:active {
+	transition: 0.2s;
+    border-left-width: 0px;
+  
+}
+
 .button {
   transition: 0.2s;
   background-color: #000000;
