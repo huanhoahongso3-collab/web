@@ -73,7 +73,8 @@ p {
   transition: 0.2s;
   background-image: linear-gradient(to right, black, #0072ff);
   background-color: #000000;
-  border: none;
+  border-style: solid;
+      border-color: black;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -82,6 +83,7 @@ p {
   border-radius: 25px;
   cursor: pointer;
   padding: 10px 10px;
+  border-width: 2px;
 }
 
 .button:active {
