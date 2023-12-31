@@ -186,11 +186,11 @@ img {
 
 .xtlab-ctmenu-item:hover {
   transition:0.2s;
-  background-color: #0072ff;
   border-left-width: 10px
 }
 
 .xtlab-ctmenu-item {
+  margin: 5px;
   color: white;
   padding: 10px 10px;
   font-size: 16px;
@@ -215,6 +215,5 @@ img {
 
 .xtlab-ctmenu-sub a:hover {
   transition:0.2s;
-  background-color: #0072ff;
   border-left-width: 10px
 }
