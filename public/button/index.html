@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5021008750553828"
      crossorigin="anonymous"></script>
@@ -43,8 +43,8 @@
 </div>
 
 <script>
-
-  var score = 0
+console.log("i dont fucking know why, but it will only run in quirks mode. ignore the error.");
+  var score = 0;
 
 function int(a, b) {
   if (a > b) {
@@ -57,8 +57,8 @@ function int(a, b) {
 }
 jQuery(document).ready(function($) {
 $( "#sus" ).click(function() {
-  var height = int(0, window.innerWidth - 200)
-  var width = int(0, window.innerHeight - 130)
+  var height = int(0, window.innerWidth - 400)
+  var width = int(0, window.innerHeight - 160)
   $("#sus").css({marginLeft: String(height), marginTop: String(width)})
   score += 1
   $("#sus").html(String(score))
@@ -66,6 +66,8 @@ $( "#sus" ).click(function() {
 $( "#tog" ).click(function() {
   $( "#this" ).toggle("slide");
 });
+</script>
+<script>
 let man = document.cookie;
 if (man.includes("null_medal=true")) {document.getElementById("icon").href = "/trueg.png";}
 </script>

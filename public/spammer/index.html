@@ -1,114 +1,129 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
-let isActive = true; // Indicates if the page is currently focused
-let intervalId; // Stores the interval ID
-let clickCount = 0; // Local click count
-let lastClickTime = 0; // Timestamp of the last click
-let isThrottled = false; // Indicates if a request is currently throttled
+<script defer>
+let isActive = true;
+let intervalId;
+let clickCount = 0;
+let lastClickTime = 0;
+let isThrottled = false;
 let allowed = true;
 let totalThrottle = 0;
-let dethrottledClickCount = 0
-    
-function updateClickButton() {
-  document.getElementById('clickButton').innerHTML = clickCount;
-}
- let throttledClickCount = 0; // Local click count during throttling
+let dethrottledClickCount = 0;
 
-    function updateThrottleCount() {
-        
-      const throttleElement = $('#throttle');
-      const throttleElement2 = $('#throttle2');
-        dethrottledClickCount = totalThrottle - throttledClickCount
-        throttleElement.text("Pending: " + totalThrottle + "/7")
-        throttleElement2.text("Sent: " + dethrottledClickCount + "/" + totalThrottle)
-      if (throttledClickCount > 0) {
-          throttleElement2.slideDown();
-        throttleElement.slideDown();
-      } else {
-        throttleElement.slideUp();
-          throttleElement2.slideUp()
+function updateClickButton() {
+  const clickButton = document.getElementById('clickButton');
+  if (clickButton) {
+    clickButton.innerHTML = clickCount;
+  }
+}
+
+let throttledClickCount = 0;
+
+function updateThrottleCount() {
+  const throttleElement = $('#throttle');
+  const throttleElement2 = $('#throttle2');
+  dethrottledClickCount = totalThrottle - throttledClickCount;
+  throttleElement.text("Pending: " + totalThrottle + "/7");
+  throttleElement2.text("Sent: " + dethrottledClickCount + "/" + totalThrottle);
+  if (throttledClickCount > 0) {
+    throttleElement2.slideDown();
+    throttleElement.slideDown();
+  } else {
+    throttleElement.slideUp();
+    throttleElement2.slideUp();
+  }
+}
+
+async function sendThrottledClicks() {
+  try {
+    isThrottled = true;
+    while (throttledClickCount > 0) {
+      const response = await fetch('https://trueuser.is-a.dev/click', {
+        method: 'POST',
+      });
+      const data = await response.json();
+      console.log(data);
+
+      throttledClickCount--;
+      clickCount++;
+      updateClickButton();
+      updateThrottleCount();
+    }
+  } catch (error) {
+    console.error(error);
+  } finally {
+    isThrottled = false;
+    allowed = true;
+    totalThrottle = 0;
+    const clickButton = document.getElementById('clickButton');
+    if (clickButton) {
+      clickButton.style = "font-family: Varela";
+    }
+  }
+}
+
+async function send() {
+  const clickButton = document.getElementById('clickButton');
+  if (clickButton) {
+    clickButton.style = "font-family: Varela; color: white";
+  }
+
+  if (isThrottled) {
+    if (totalThrottle < 6 && allowed) {
+      throttledClickCount++;
+      totalThrottle++;
+    } else {
+      if (totalThrottle < 8 && allowed) {
+        throttledClickCount++;
+        totalThrottle++;
+        allowed = false;
       }
     }
-
-function send() {
-document.getElementById('clickButton').style = "font-family: Varela; color: white";
- if (isThrottled) {
-if (totalThrottle < 6 && allowed) {
-  throttledClickCount++;
-    totalThrottle++
-} else {
-     if (totalThrottle < 8 && allowed) {
-    throttledClickCount++;
-    totalThrottle++
-     allowed = false
-     }
-}
-   updateThrottleCount();
-   return;
- }
+    updateThrottleCount();
+    return;
+  }
 
   clickCount++;
   updateClickButton();
   lastClickTime = Date.now();
 
-  // Make a GET request 3 seconds after the last click
   clearTimeout(intervalId);
   intervalId = setTimeout(fetchAndUpdateClickButton, 3000);
 
-  // Throttle subsequent requests if a request is already in progress
   if (isThrottled) {
     return;
   }
 
-  // Make a POST request to your API endpoint
   try {
-    isThrottled = true; // Set throttling flag
-    const response = await fetch('https://api.trueuser0.repl.co/click', {
+    isThrottled = true;
+    const response = await fetch('https://trueuser.is-a.dev/click', {
       method: 'POST',
     });
     const data = await response.json();
     console.log(data);
 
-    // Check if there are pending clicks during throttling
     if (throttledClickCount > 0) {
-      // Send additional post requests until throttled click count reaches 0
-      while (throttledClickCount > 0) {
-        await fetch('https://api.trueuser0.repl.co/click', {
-          method: 'POST',
-        });
-        throttledClickCount--;
-        clickCount++;
-          updateClickButton()
-        updateThrottleCount()
-      }
+      await sendThrottledClicks();
     }
   } catch (error) {
     console.error(error);
   } finally {
-    isThrottled = false; // Reset throttling flag
-    allowed = true
-    totalThrottle = 0
-  }
-     document.getElementById('clickButton').style = "font-family: Varela";
-}
-
-async function fetchAndUpdateClickButton() {
-  try {
-    // Make a GET request to your API endpoint
-    const response = await fetch('https://api.trueuser0.repl.co/click');
-    const data = await response.json();
-    const fetchedCount = data.num;
-
-    // Update the click count regardless of the fetched count
-    clickCount = fetchedCount;
-    updateClickButton();
-  } catch (error) {
-    console.error(error);
+    isThrottled = false;
+    allowed = true;
+    totalThrottle = 0;
   }
 }
 
-
+function fetchAndUpdateClickButton() {
+  fetch('https://trueuser.is-a.dev/click')
+    .then(response => response.json())
+    .then(data => {
+      const fetchedCount = data.num;
+      clickCount = fetchedCount;
+      updateClickButton();
+    })
+    .catch(error => console.error(error));
+}
 
 function handleVisibilityChange() {
   if (document.hidden) {
@@ -116,9 +131,7 @@ function handleVisibilityChange() {
     isActive = false;
   } else {
     isActive = true;
-    fetchAndUpdateClickButton(); // Update immediately when page becomes active
-
-    // Make a GET request 3 seconds after the last click
+    fetchAndUpdateClickButton();
     const timeSinceLastClick = Date.now() - lastClickTime;
     const delay = Math.max(0, 3000 - timeSinceLastClick);
     clearTimeout(intervalId);
@@ -126,29 +139,27 @@ function handleVisibilityChange() {
   }
 }
 
-// Check if the page is currently focused or not
 document.addEventListener('visibilitychange', handleVisibilityChange);
 
-// Initial data retrieval
-fetchAndUpdateClickButton();
+document.addEventListener('DOMContentLoaded', function() {
+  fetchAndUpdateClickButton();
 
-(function animate() {
-  if (isActive) {
-    const timeSinceLastClick = Date.now() - lastClickTime;
-    const delay = Math.max(0, 3000 - timeSinceLastClick);
-    
-    if (delay === 0) {
-      fetchAndUpdateClickButton();
-      if (!isThrottled) {
-      lastClickTime = Date.now();
+  (function animate() {
+    if (isActive) {
+      const timeSinceLastClick = Date.now() - lastClickTime;
+      const delay = Math.max(0, 3000 - timeSinceLastClick);
+
+      if (delay === 0) {
+        fetchAndUpdateClickButton();
+        if (!isThrottled) {
+          lastClickTime = Date.now();
+        }
       }
     }
-  }
-  
-  requestAnimationFrame(animate);
-})();
 
-
+    requestAnimationFrame(animate);
+  })();
+});
 
 
 // Clean up resources when the page is unloaded or closed
@@ -157,8 +168,6 @@ window.addEventListener('beforeunload', () => {
 });
 
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5021008750553828"
-     crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <meta property="og:site_name" content="thisistrueuser">

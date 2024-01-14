@@ -22,6 +22,16 @@ table {
 th, td {
   padding: 5px;
 }
+.button:active {
+	  transition: 0.2s;
+  color: #0072ff;
+  border-left-width: 2px;
+}
+button:active {
+	  transition: 0.2s;
+  color: #0072ff;
+  border-left-width: 2px;
+}
 </style>
 <div>
 <div class="topnav">
@@ -44,25 +54,25 @@ th, td {
 <br>
 
 <table>
-<tr><td><strong>Jan 1, 2024</strong><br>v2.5</td><td>The look and feel of the site has been completely redesigned<br> To be continued...</td></tr>
-<tr><td><strong>Nov 19, 2023</strong><br>v2.4</td><td>Updated the looks a little bit</td></tr>
+<tr><td><strong>Jan 1, 2024</strong><br>v2.5</td><td>The look and feel of the site has been completely redesigned.<br> It's now a tradition to make huge updates on New Year. Happy New Year.</td></tr>
+<tr><td><strong>Nov 19, 2023</strong><br>v2.4</td><td>Updated the looks a little bit<br> It's not a huge update by any means but it is what it is.</td></tr>
 <tr><td><strong>Jul 5, 2023</strong><br>v2.3</td><td>New HTML page: Spammer<br> You can spam the hell out of the button and everyone will appreciate your effort<br> Update versioning added. <br> Improved animations.</td></tr>
 <tr><td><strong>Jun 5, 2023</strong><br>v2.2</td><td>New HTML page: Infinite<br> Card sections now use ids (you can reload the page and keep the section!) <br> Smooth scrolling at last.</td></tr>
 <tr><td><strong>Apr 25, 2023</strong><br>v2.1</td><td>Cards and button hover restyled <br> Card buttons added</td></tr>
-<tr><td><strong>Jan 1, 2023</strong><br>v2.0</td><td>Brought the changelog back to life with basic HTML (i am dumb) <br> Mobile compability updates <br> Projects seprerated into categories <br> New implementation of v1.8 easter egg<br> HAPPY NEW YEARR!!!</td></tr>
+<tr><td><strong>Jan 1, 2023</strong><br>v2.0</td><td>Brought the changelog back. <br> Mobile compability updates <br> Projects seprerated into categories <br> New implementation of v1.8 easter egg<br> HAPPY NEW YEARR!!!</td></tr>
 <tr><td><strong>Jul 27, 2022</strong><br>v1.9</td><td>Redesigned the layout <br> Took down changelog</td></tr>
-<tr><td><strong>May 15, 2022</strong><br>v1.8</td><td>Social links redesigned.</td></tr>
+<tr><td><strong>May 15, 2022</strong><br>v1.8</td><td>Social links redesigned. <br> Find something...</td></tr>
 <tr><td><strong>Apr 9, 2022</strong><br>v1.7</td><td>Redesigned the entire thing <br> More design changes soon!</td></tr>
 <tr><td><strong>Feb 4, 2022</strong><br>v1.6</td><td>Changed the site's colors!<br> Fixed some bugs.</td></tr>
 <tr><td><strong>Feb 2, 2022</strong><br>v1.5</td><td>Changed the site's font.<br> Added Animations!</td></tr>
 <tr><td><strong>Jan 6, 2022</strong><br>v1.4</td><td>Discord link added, updated this page a lil bit <br> Happy (late) new year!</td></tr>
-<tr><td><strong>Dec 8, 2021</strong><br>v1.3</td><td>Updated all embeds, Merry Christmas! <br>Please do not go to <a style='color: white; text-align: center; padding: 5px 10px; text-decoration: none; font-size: 16px;  user-select: none; background-color: #0C101C; margin: 3px; border-radius: 5px' href="/secret">secret</a>, I warned you</td></tr>
+<tr><td><strong>Dec 8, 2021</strong><br>v1.3</td><td>Updated all embeds, Merry (early) Christmas. <br>Please do not go to <a class="button" href="/secret" style="padding: 5px 10px">secret</a>, I warned you</td></tr>
 <tr><td><strong>Nov 25, 2021</strong><br>v1.2</td><td>Roblox link added <br> Easter egg added</td></tr>
 <tr><td><strong>Nov 9, 2021</strong><br>v1.1</td><td>Most <button style="font-family: Varela; font-size: 16px; padding: 5px 10px" id="man" class="button" onclick="hi()">buttons</button> now have signature look<br>This section now exists, I will put site updates here</td></tr>
 </table>
 
 <script>
-const a = ["you expected something?", "okay fine", "if you click here you will get pranked", "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>", "woah how did you dodge it", "expecting more?", "no u", "im runnin out of text stdings", "click here to get a golden trueuser", "here it is, now stop clicking"]
+const a = ["you expected something?", "okay fine", "if you click here you will get pranked", "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>", "woah how did you dodge it", "expecting more?", "no u", "im runnin out of text strings", "click here to get a golden trueuser", "here it is, now stop clicking"]
 function hi() {
      document.getElementById("man").innerHTML = a[num]
      num += 1
