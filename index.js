@@ -81,7 +81,7 @@ app.all('*', (req, res) => {
 
 app.use((_, res) => {});
 
-const port = 7867;
+const port = 9550;
 app.listen(port, "0.0.0.0", () => {
   console.log(`Server listening on port ${port}`);
 });

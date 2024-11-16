@@ -23,7 +23,7 @@ function updateThrottleCount() {
   const throttleElement = $('#throttle');
   const throttleElement2 = $('#throttle2');
   dethrottledClickCount = totalThrottle - throttledClickCount;
-  throttleElement.text("Pending: " + totalThrottle + "/7");
+  throttleElement.text("Pending: " + totalThrottle + "/20");
   throttleElement2.text("Sent: " + dethrottledClickCount + "/" + totalThrottle);
   if (throttledClickCount > 0) {
     throttleElement2.slideDown();
@@ -69,11 +69,11 @@ async function send() {
   }
 
   if (isThrottled) {
-    if (totalThrottle < 6 && allowed) {
+    if (totalThrottle < 19 && allowed) {
       throttledClickCount++;
       totalThrottle++;
     } else {
-      if (totalThrottle < 8 && allowed) {
+      if (totalThrottle < 21 && allowed) {
         throttledClickCount++;
         totalThrottle++;
         allowed = false;
@@ -169,7 +169,6 @@ window.addEventListener('beforeunload', () => {
 
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!DOCTYPE html>
 <meta property="og:site_name" content="thisistrueuser">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Spammer" />
@@ -244,6 +243,3 @@ if (man.includes("null_medal=true")) {document.getElementById("icon").href = "/t
 </script>
 
 <p2 style="font-family:Varela" id="demo"><button id="clickButton" onclick="send()" class="button" style="font-family: Varela">?</button></p2><p style="font-family:Varela; margin-top: 55px; font-size: 13px; z-index: -1" id="throttle"/><p style="font-family:Varela; margin-top: 75px; font-size: 13px; z-index: -1" id="throttle2"/>
-
-</p>
-</html>
