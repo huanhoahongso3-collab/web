@@ -61,7 +61,7 @@ p {
   text-shadow: none;
   border-radius: 13px;
   border-style: solid;
-  border-color: #0072ff;
+  border-color: #FFC0CB;
   border-width: 2px;
   margin: 5px;
   cursor: pointer
@@ -69,19 +69,19 @@ p {
 
 .topnav a:hover {
 transition: 0.2s;
-border-left-color: #0072ff;
+border-left-color: #FFC0CB;
 border-left-width: 10px
 }
 
 .topnav a.active {
 	transition: 0.2s;
-  background-color: #0072ff;
+  background-color: #FFC0CB;
   color: black;
   
 }
 .topnav a:active {
 		  transition: 0.2s;
-  color: #0072ff;
+  color: #FFC0CB;
   border-left-width: 2px;
 }
 
@@ -98,9 +98,9 @@ border-left-width: 10px
 .button {
   transition: 0.2s;
   background-color: #000000;
-  color: #0072ff;
+  color: #FFC0CB;
     border-style: solid;
-    border-color: #0072ff;
+    border-color: #FFC0CB;
   border-width: 2px;
   color: pink;
   text-align: center;
@@ -115,7 +115,7 @@ border-left-width: 10px
 
 .button:active {
 	  transition: 0.2s;
-  color: #0072ff;
+  color: #FFC0CB;
   border-left-width: 2px;
 }
 
@@ -225,4 +225,4 @@ a {
   transition:0.2s;
   border-left-width: 2px
 }
-img {vertical-align: text-bottom}
+img {vertical-align: text-bottom}	
