@@ -5,8 +5,8 @@
 #box {width: 410px; border-radius: 13px}
 html {
   font-family: 'Varela', sans-serif;
-  background-color: pink;
-  color: white;
+  background-color: black;
+  color: pink;
   margin-left: 10%;
   margin-right: 10%;
   scroll-behavior: smooth;
@@ -52,7 +52,7 @@ p {
 .topnav a {
 	transition: 0.2s;
   float: left;
-  color: white;
+  color: pink;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
@@ -102,7 +102,7 @@ border-left-width: 10px
     border-style: solid;
     border-color: #0072ff;
   border-width: 2px;
-  color: white;
+  color: pink;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -123,7 +123,7 @@ border-left-width: 10px
   transition: 0.2s;
   background-color: #000000;
     border-style: solid;
-    border-color: #0072ff;
+    border-color: #ffc0cb;
   border-width: 2px;
   border-left-width: 10px;
 }
@@ -134,7 +134,7 @@ border-left-width: 10px
   border-style: solid;
   border-radius: 13px;
   background-color: black;
-  border-color: #0072ff;
+  border-color: #ffc0cb;
   border-width: 2px;
   margin: 7px;
   padding: 5px;
@@ -143,7 +143,7 @@ border-left-width: 10px
 .card:hover {
 	transition: 0.2s;
   border-left-width: 10px;
-  border-left-color: #0072ff;
+  border-left-color: #ffc0cb;
 }
 
 .card:active {
@@ -199,7 +199,7 @@ a {
   font-size: 16px;
   border-radius: 13px;
   border-style: solid;
-  border-color: #0072ff;
+  border-color: #ffc0cb;
   border-width: 2px;
   cursor: pointer;
 }
